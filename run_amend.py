@@ -50,4 +50,6 @@ with open(new_file_name,'wb') as file:
 	file.write(data) 
 
 existing_file.close()
+if not os.path.exists(completed_folder):
+	os.mkdirs(completed_folder)
 shutil.move(existing_file.name, completed_folder)
